@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+{% block content %}
+<body>
+ <div class="container">
+  <h2>Registration Form</h2>
+    {% with messages = get_flashed_messages() %}
+{% if messages and 'email' in messages[0] %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
+    </div>
+{% endif %}
+{% endwith %}
+ <form action="" method="post">
+  <div class="form-group">
+    <label for="name">username</label>
+    <input type="text" class="form-control" id="exampleInputfirstname" name="username">
+  </div>
+  <div class="form-group">
+    <label for="Secondname">Full Name</label>
+    <input type="text" class="form-control" id="exampleInputlastname" name="full_name">
+  </div>
+  <div class="form-group">
+    <label for="Email1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+  </div>
+  <div class="form-group">
+    <label for="Age">Age</label>
+    <input type="age" class="form-control" id="99" aria-describedby="emailHelp" name="age">
+  </div>
+  <div class="form-group">
+    <label for="Password">Password</label>
+    {% with messages = get_flashed_messages() %}
+{% if messages and 'password' in messages[0] %}
+    <div class="notification is-danger">
+        {{ messages[0] }}</a>.
+    </div>
+{% endif %}
+{% endwith %}
+    <input type="password" class="form-control" id="exampleInputPassword" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary" name="create">Sign up</button>
+</form>
+</div>
+{% endblock %}

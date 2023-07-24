@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{% block content %}
+<body>
+    <form method='post'>
+        <p>
+            <label for='title'>Title</label>
+            <input type='text' name='title' value='{{ post.title }}'></input>
+        </p>
+        <p>
+            <label for='content'>Content</label>
+            <input type ='text' name='content' value='{{ post.content }}'></input>
+        </p>
+        <div>
+            <button type='submit'>Update</button>
+        </div>
+    </form>
+{%endblock%}

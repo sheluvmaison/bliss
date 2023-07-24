@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{% block content %}
+<body>
+    <div>
+  <h1>id: {{ post.id }}</h1>
+  <h1>{{ post.title }}</h1>
+  <h4>{{ post.author.name }}</h4>
+  <p>{{ post.date }}</p>
+  <p>{{ post.content }}</p>
+  <div>
+   <a href='http://127.0.0.1:5000/{{post.id}}/delete/'><button type="button" class="btn btn">Delete</button></a>
+   <a href='http://127.0.0.1:5000/{{post.id}}/update/'><button type="button" class="btn btn">Update</button></a>
+  </div>
+    </div>
+
+ {% endblock %}

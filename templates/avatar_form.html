@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Загрузка аватарки</title>
+</head>
+<body>
+    <h1>Загрузите свою аватарку или выберите из предоставленных вариантов:</h1>
+    <form method="post" enctype="multipart/form-data">
+        <!-- Поле для загрузки пользовательской аватарки -->
+        <input type="file" name="avatar">
+        <br>
+        <h2>Или выберите одну из предоставленных аватарок:</h2>
+        <!-- Здесь используем url_for для указания пути к аватаркам -->
+        <input type="radio" name="avatar_choice" value="/static/avatars/avatar2.jpg">
+<img src={{user.avatar}} width="50" height="50">
+<br>
+
+        <input type="radio" name="avatar_choice" value="/static/avatars/avatar2.jpg">
+<img src="/static/avatars/avatar2.jpg" width="50" height="50">
+<br>
+<input type="radio" name="avatar_choice" value="/static/avatars/avatar3.jpg">
+<img src="/static/avatars/avatar3.jpg" width="50" height="50">
+<br>
+       
+        <input type="submit" value="Загрузить и применить аватарку">
+    </form>
+</body>
+</html>

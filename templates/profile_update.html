@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{% block content %}
+<body>
+    <label>Аватарка:</label>
+    <input type="file" name="avatar">
+    <br>
+    <input type="submit" value="Сохранить изменения">
+    <form method='post'>
+        <p>
+            <label for='full_name'>full_name</label>
+            <input type='text' name='full_name' value='{{ user.full_name }}'></input>
+        </p>
+        <p>
+            <label for='username'>username</label>
+            <input type ='text' name='username' value='{{ user.username }}'></input>
+        </p>
+        <p>
+            <label for='name'>name</label>
+            <input type='text' name='name' value='{{ user.name }}'></input>
+        </p>
+        <p>
+            <label for='email'>email</label>
+            <input type ='text' name='email' value='{{ user.email }}'></input>
+        </p>
+        <p>
+            <label for='age'>age</label>
+            <input type='text' name='age' value='{{ user.age }}'></input>
+        </p>
+        <div>
+            <button type='submit'>Update</button>
+        </div>
+    </form>
+{%endblock%}
